@@ -103,12 +103,11 @@
 
             const form = event.target;
             const formData = new FormData(form);
-            const data = new URLSearchParams(formData); // Creates URL-encoded string for POST request
 
             try {
                 const response = await fetch(WEB_APP_URL, {
                     method: 'POST',
-                    body: data // Send URL-encoded data
+                    body: formData // Send FormData directly
                 });
 
                 const result = await response.json(); // Apps Script returns JSON

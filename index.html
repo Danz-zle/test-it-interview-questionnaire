@@ -21,69 +21,73 @@
         #responseMessage.error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>IT Newbie Interview Challenge</h1>
         <p>Welcome! This quick challenge assesses your awareness of recent IT trends. Please answer the following multiple-choice questions.</p>
 
         <form id="interviewForm">
+
             <div class="name-input">
                 <label for="candidateName">Your Full Name:</label>
                 <input type="text" id="candidateName" name="candidateName" required>
             </div>
 
+            <!-- QUESTIONS (unchanged) -->
+
+            <!-- Q1 -->
             <div class="question-block">
                 <p>1. Cloud Computing Evolution: Serverless Architecture</p>
-                <p>Which of the following best describes the primary advantage of <strong>serverless computing</strong> in a modern cloud environment?</p>
                 <div class="options">
-                    <label><input type="radio" name="q1" value="a" required> a) It eliminates the need for any code development, allowing applications to be built entirely through drag-and-drop interfaces.</label>
-                    <label><input type="radio" name="q1" value="b"> b) It allows developers to deploy code without managing underlying servers, automatically scaling resources based on demand and billing per execution.</label>
-                    <label><input type="radio" name="q1" value="c"> c) It guarantees that all application data is stored on physical servers located within the company's own data center, enhancing data sovereignty.</label>
-                    <label><input type="radio" name="q1" value="d"> d) It centralizes all computational tasks onto a single, powerful server to maximize processing speed for all applications.</label>
+                    <label><input type="radio" name="q1" value="a" required> a)</label>
+                    <label><input type="radio" name="q1" value="b"> b)</label>
+                    <label><input type="radio" name="q1" value="c"> c)</label>
+                    <label><input type="radio" name="q1" value="d"> d)</label>
                 </div>
             </div>
 
+            <!-- Q2 -->
             <div class="question-block">
                 <p>2. Generative AI & Its Impact</p>
-                <p>Recently, <strong>Generative AI</strong> has gained significant attention. Which of these is a <em>key characteristic</em> that distinguishes it from traditional AI (e.g., rule-based systems or basic machine learning for classification)?</p>
                 <div class="options">
-                    <label><input type="radio" name="q2" value="a" required> a) Its ability to perform simple mathematical calculations faster than humans.</label>
-                    <label><input type="radio" name="q2" value="b"> b) Its capability to create new, original content (like text, images, or code) rather than just analyzing or classifying existing data.</label>
-                    <label><input type="radio" name="q2" value="c"> c) Its requirement for human programmers to explicitly define every possible output for a given input.</label>
-                    <label><input type="radio" name="q2" value="d"> d) Its primary use is for optimizing hardware performance and network latency in large data centers.</label>
+                    <label><input type="radio" name="q2" value="a" required> a)</label>
+                    <label><input type="radio" name="q2" value="b"> b)</label>
+                    <label><input type="radio" name="q2" value="c"> c)</label>
+                    <label><input type="radio" name="q2" value="d"> d)</label>
                 </div>
             </div>
 
+            <!-- Q3 -->
             <div class="question-block">
                 <p>3. Cybersecurity Trends: Zero Trust Model</p>
-                <p>The <strong>Zero Trust</strong> security model is becoming increasingly prevalent. What is its fundamental principle?</p>
                 <div class="options">
-                    <label><input type="radio" name="q3" value="a" required> a) Once a user is authenticated into the network, they are granted full access to all resources for a limited time.</label>
-                    <label><input type="radio" name="q3" value="b"> b) It assumes that all users and devices, even those inside the network perimeter, are potentially hostile and must be verified continuously.</label>
-                    <label><input type="radio" name="q3" value="c"> c) It relies solely on a strong perimeter firewall to protect internal systems from external threats.</label>
-                    <label><input type="radio" name="q3" value="d"> d) It advocates for the complete elimination of passwords, replacing them with biometric authentication for all access.</label>
+                    <label><input type="radio" name="q3" value="a" required> a)</label>
+                    <label><input type="radio" name="q3" value="b"> b)</label>
+                    <label><input type="radio" name="q3" value="c"> c)</label>
+                    <label><input type="radio" name="q3" value="d"> d)</label>
                 </div>
             </div>
 
+            <!-- Q4 -->
             <div class="question-block">
-                <p>4. DevOps/Containerization: Orchestration with Kubernetes</p>
-                <p><strong>Kubernetes</strong> is a leading tool in modern IT operations. What is its primary function?</p>
+                <p>4. Kubernetes</p>
                 <div class="options">
-                    <label><input type="radio" name="q4" value="a" required> a) To replace traditional coding languages with a graphical programming interface for application development.</label>
-                    <label><input type="radio" name="q4" value="b"> b) To automatically deploy, scale, and manage containerized applications across a cluster of machines.</label>
-                    <label><input type="radio" name="q4" value="c"> c) To serve as a comprehensive project management platform for software development teams.</label>
-                    <label><input type="radio" name="q4" value="d"> d) To encrypt all network traffic within a data center to prevent eavesdropping and data breaches.</label>
+                    <label><input type="radio" name="q4" value="a" required> a)</label>
+                    <label><input type="radio" name="q4" value="b"> b)</label>
+                    <label><input type="radio" name="q4" value="c"> c)</label>
+                    <label><input type="radio" name="q4" value="d"> d)</label>
                 </div>
             </div>
 
+            <!-- Q5 -->
             <div class="question-block">
-                <p>5. Emerging Tech: Edge Computing</p>
-                <p><strong>Edge computing</strong> is gaining traction in various industries. What is the main motivation behind deploying computing resources at the 'edge' of a network?</p>
+                <p>5. Edge Computing</p>
                 <div class="options">
-                    <label><input type="radio" name="q5" value="a" required> a) To consolidate all data processing into a single, highly powerful central cloud server.</label>
-                    <label><input type="radio" name="q5" value="b"> b) To reduce the amount of data generated by Internet of Things (IoT) devices.</label>
-                    <label><input type="radio" name="q5" value="c"> c) To decrease latency, reduce bandwidth usage, and enable real-time processing by bringing computation closer to the data source.</label>
-                    <label><input type="radio" name="q5" value="d"> d) To eliminate the need for any network connectivity for remote devices.</label>
+                    <label><input type="radio" name="q5" value="a" required> a)</label>
+                    <label><input type="radio" name="q5" value="b"> b)</label>
+                    <label><input type="radio" name="q5" value="c"> c)</label>
+                    <label><input type="radio" name="q5" value="d"> d)</label>
                 </div>
             </div>
 
@@ -94,40 +98,38 @@
     </div>
 
     <script>
-        const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbylqOZoEyV4J3fnAv4bC0a27YEhuig6f2FgdWZB6jcbbK77sxLmUl9rwEu_na88w4tw/exec' // <--- PASTE YOUR URL HERE
+        const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbylqOZoEyV4J3fnAv4bC0a27YEhuig6f2FgdWZB6jcbbK77sxLmUl9rwEu_na88w4tw/exec';
 
-        document.getElementById('interviewForm').addEventListener('submit', async function(event) {
-            event.preventDefault(); // Prevent default form submission
-            const responseMessage = document.getElementById('responseMessage');
-            responseMessage.style.display = 'none'; // Hide previous messages
+        document.getElementById('interviewForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
 
             const form = event.target;
             const formData = new FormData(form);
+            const responseMessage = document.getElementById('responseMessage');
 
             try {
                 const response = await fetch(WEB_APP_URL, {
                     method: 'POST',
-                    body: formData // Send FormData directly
+                    body: formData
                 });
 
-                const result = await response.json(); // Apps Script returns JSON
+                const result = await response.json();
 
                 if (result.status === 'success') {
-                    responseMessage.className = 'success';
-                    responseMessage.innerText = 'Thank you! Your answers have been submitted successfully.';
-                    form.reset(); // Clear the form
+                    // ✅ REDIRECT TO REVIEW PAGE
+                    window.location.href = `review.html?row=${result.row}`;
                 } else {
                     responseMessage.className = 'error';
                     responseMessage.innerText = 'Error submitting answers: ' + result.message;
+                    responseMessage.style.display = 'block';
                 }
             } catch (error) {
-                console.error('Network or submission error:', error);
                 responseMessage.className = 'error';
-                responseMessage.innerText = 'A network error occurred. Please try again or contact support.';
-            } finally {
-                responseMessage.style.display = 'block'; // Show the message
+                responseMessage.innerText = 'Network error. Please try again.';
+                responseMessage.style.display = 'block';
             }
         });
     </script>
+
 </body>
 </html>

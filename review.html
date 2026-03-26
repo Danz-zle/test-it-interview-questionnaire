@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Review</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    table { border-collapse: collapse; width: 100%; max-width: 700px; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: center; }
+    th { background: #eee; }
+    .correct { color: green; font-weight: bold; }
+    .wrong { color: red; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+<h1>Your Quiz Review</h1>
+
+<table id="reviewTable">
+  <tr>
+    <th>Question</th>
+    <th>Your Answer</th>
+    <th>Correct Answer</th>
+    <th>Score</th>
+  </tr>
+</table>
+
+<h2 id="totalScore"></h2>
+
+<script>
+const WEB_APP_URL = "PASTE_YOUR_EXEC_URL_HERE";
+
+const params = new URLSearchParams(window.location.search);
+const row = params.get("row");
+
+fetch(`${WEB_APP_URL}?row=${row}`)
+  .then(res => res.json())
+  .then(data => {
+    const table = document.getElementById("reviewTable");
+
+    for (let i = 1; i <= 5; i++) {
+      const q = `q${i}`;
+      const your = data.answers[q];
+      const correct = data.correct[q];
+      const score = data.scores[q];
+
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>Q${i}</td>
+        <td>${your}</td>
+        <td class="${your === correct ? 'correct' : 'wrong'}">${correct}</td>
+        <td>${score}</td>
+      `;
+      table.appendChild(tr);
+    }
+
+    document.getElementById("totalScore").innerText =
+      `Total Score: ${data.scores.total} / 100`;
+  });
+</script>
+
+</body>
+</html>

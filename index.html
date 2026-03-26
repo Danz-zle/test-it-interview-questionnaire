@@ -1,3 +1,10 @@
+<script>
+  // ✅ Hard reset URL state if query params exist
+  if (window.location.search) {
+    history.replaceState(null, "", window.location.pathname);
+  }
+</script>
+``
 <!DOCTYPE html>
 <html lang="en">
 <head>
